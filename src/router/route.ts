@@ -3,7 +3,7 @@ import { RouteRecordRaw } from 'vue-router';
 export const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/todolist',
+    redirect: '/todolist123',
   },
   {
     path: '/todolist',
