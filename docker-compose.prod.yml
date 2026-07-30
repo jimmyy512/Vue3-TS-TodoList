@@ -5,8 +5,8 @@ services:
       dockerfile: Dockerfile.prod
     image: vue3-todo-list:latest # 为镜像指定一个名称
     ports:
-      - "3102:80" # 将容器的 80 端口映射到宿主机的 3102 端口，供 Nginx 使用
-      - "3103:3087" # 将容器的 3087 端口映射到宿主机的 3103 端口，供 JSON Server 使用
+      - "127.0.0.1:3102:80" # 只給本機除錯用；正式流量走 MainNginx 反代
+      - "127.0.0.1:3103:3087" # 只給本機除錯用；正式流量走 MainNginx 反代
     volumes:
       - ./var/log/nginx:/var/log/nginx
     networks:
